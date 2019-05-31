@@ -3,7 +3,7 @@
 ;;
 ;; Author: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; Keywords: extensions, convenience
-;; Version: 0.9.0
+;; Version: 1.0.0
 ;; Maintainer: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; URL: https://github.com/takaxp/counsel-selected
 ;; Package-Requires: ((emacs "24.4") (ivy "0.11") (selected "1.01"))
@@ -54,6 +54,7 @@
                                           'face 'counsel-key-binding)))))
     (error "The argument is NOT keymap")))
 
+;;;###autoload
 (defun counsel-selected ()
   "Find a command for `selected'."
   (interactive)
