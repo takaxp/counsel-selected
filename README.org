@@ -1,0 +1,28 @@
+#+TITLE: An ivy/counsel extension for selected.el
+
+* Introduction
+
+That packages is an =ivy/counsel= extension for =selected.el=. =selected.el= provides a combined keymap with associated commands for the selected region like a popup menu when you right-click on a selected word in your document. The menu, however, will not be displayed in an emacs buffer. So this package provides a visible menu with command candidates by supporting of =ivy/counsel= interface.
+
+* Recommended setting
+
+#+BEGIN_SRC emacs-lisp
+(with-eval-after-load "selected"
+  (when (require 'counsel-selected nil t)
+    (define-key selected-keymap (kbd "h") 'counsel-selected)))
+#+END_SRC
+
+After you select a region in your emacs buffer, just type =h=, then a command menu will be popping up.
+
+** Variables
+
+You can hide key bindings when showing the command list by configuring =counsel-selected-show-key-binding=. The default value is =t=.
+
+* Contacts
+
+Contact me by Twitter [[https://twitter.com/takaxp][@takaxp]].
+
+* References
+ - https://github.com/takaxp/helm-selected
+ - https://oremacs.com/swiper/
+ - https://github.com/abo-abo/swiper
